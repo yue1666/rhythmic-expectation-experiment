@@ -132,7 +132,7 @@ if (metronomeAudio !== null) {
           duration_seconds: TASK_DURATION_SECONDS,
           total_responses: totalResponses,
           correct_count: correctCount,
-          error_count: errorRate === null ? totalResponses - correctCount : errorCount,
+          error_count: errorCount,
           error_rate: errorRate,
           mean_rt: meanRt,
           responses: JSON.stringify(responses)
