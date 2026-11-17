@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <script src="jspsych/dist/jspsych.js"></script>
+  <script src="jspsych/dist/plugin-html-keyboard-response.js"></script>
+  <script src="jspsych/dist/plugin-survey-multi-choice.js"></script>
+  <script src="jspsych/dist/plugin-survey-likert.js"></script>
+
+  <link href="jspsych/dist/jspsych.css" rel="stylesheet" />
+
+ <script src="modules/intro.js"></script>
+<script src="modules/precheck.js"></script>
+<script src="modules/pre_questionnaire.js"></script>
+<script src="modules/addition_task.js"></script>
+<script src="modules/post_questionnaire_no_sound.js"></script>
+<script src="modules/volume_check.js"></script>
+<script src="modules/neutral_instruction.js"></script>
+<script src="modules/post_questionnaire_sound.js"></script>
+<script src="modules/debriefing.js"></script>
+</head>
+
+<body></body>
+
+<script>
+const jsPsych = initJsPsych({
+
+  on_finish: function() {
+
+    jsPsych.data.get().localSave(
+      'csv',
+      'experiment_data.csv'
+    );
+
+  }
+
+});
+
+const timeline = [
+
+  intro_page,
+
+  precheck,
+
+  pre_questionnaire,
+
+  addition_instruction_no_sound,
+
+  createAdditionTask("no_sound"),
+
+  post_questionnaire_no_sound_intro,
+
+  post_questionnaire_no_sound,
+
+  volume_check,
+
+  neutral_instruction,
+
+  createAdditionTask("neutral_sound"),
+
+  post_questionnaire_sound,
+
+  debriefing
+
+];
+
+jsPsych.run(timeline);
+</script>
+
+</html>
