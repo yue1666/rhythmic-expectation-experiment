@@ -21,15 +21,11 @@ A Japanese-language, browser-based cognitive psychology experiment investigating
 
 ## Portfolio repository status
 
-**Source code is available, but this repository is not yet a complete runnable deployment.** The following runtime resources have not been transferred to GitHub and are needed to run the entry-point pages as written:
+The repository contains both experiment entry-point pages, the supporting JavaScript modules, jsPsych runtime assets, the instruction image, and an audio file. Files are provided for academic portfolio review and source-code inspection.
 
-- `jspsych/dist/` (jsPsych library and referenced plugins/CSS)
-- `sounds/metronome_90bpm.m4a`
-- `images/expectation_material.png`
+**Audio fidelity note:** The hosted `sounds/metronome_90bpm.m4a` is a **re-encoded demonstration copy** (48 kbps mono AAC) made from the original stereo audio to permit direct transfer. Its duration remains 236.181 seconds and the intended rhythmic tempo is 90 BPM. Because its encoding and channels differ from the original recording, it should **not** be used as a substitute for the validated experimental stimulus or for reproducing the reported study. The original source audio is retained separately.
 
-The complete local ZIP package was prepared separately. The missing assets need to be uploaded with the same relative paths before running or publishing the experiment.
-
-The original experimental logic has been retained. Browser compatibility, timing precision, sound playback, and CSV exports have **not** been validated on a public deployment.
+The original task logic has been retained. Browser compatibility, timing precision, sound playback, and CSV exports have **not** been independently validated on a public deployment. GitHub Pages is not enabled by this upload.
 
 ## Research and privacy notes
 
